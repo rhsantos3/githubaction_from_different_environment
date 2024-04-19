@@ -24,7 +24,6 @@ jobs:
       name: develop
     steps:
       - name: Deploy app development 
-        uses: actions/checkout@v3
         run: echo deploy develop complete!
 
   production:
@@ -35,5 +34,4 @@ jobs:
       name: production
     steps:
       - name: Deploy app production
-        uses: actions/checkout@v3
         run: echo deploy production complete!
