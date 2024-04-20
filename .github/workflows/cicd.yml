@@ -26,7 +26,7 @@ jobs:
       CONTAINER_NAME: quality-ai-api-dev-container      
     steps:
       - name: Deploy app development 
-        run: echo "secretkey=${{ secrets.SECRET_KEY }}" 
+        run: echo "secretkey=$CONTAINER_NAME" 
 
   production:
     runs-on: ubuntu-latest
@@ -38,4 +38,4 @@ jobs:
       CONTAINER_NAME: quality-ai-api-container   
     steps:
       - name: Deploy app production
-        run: echo deploy production complete!
+        run: echo "secretkey=$CONTAINER_NAME" 
